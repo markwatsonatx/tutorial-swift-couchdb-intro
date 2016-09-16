@@ -41,29 +41,24 @@ public class CouchDBClient {
     // MARK: db
     
     public func createDb(db: String, completionHandler: @escaping (CouchDBCreateDbResponse?, Swift.Error?) -> Void) {
-        //do {
-            let options = self.createPutRequest(db: db, path: "")
-            Log.info("PUT /.")
-            let req = HTTP.request(options) { response in
-                do {
-                    Log.info("Received response for /.")
-                    let dict: [String:Any]? = try self.parseResponse(response: response, error: nil)
-                    if (dict != nil) {
-                        completionHandler(CouchDBCreateDbResponse(dict:dict!), nil)
-                    }
-                    else {
-                        completionHandler(nil, nil)
-                    }
+        let options = self.createPutRequest(db: db, path: "")
+        Log.info("PUT /.")
+        let req = HTTP.request(options) { response in
+            do {
+                Log.info("Received response for /.")
+                let dict: [String:Any]? = try self.parseResponse(response: response, error: nil)
+                if (dict != nil) {
+                    completionHandler(CouchDBCreateDbResponse(dict:dict!), nil)
                 }
-                catch {
-                    completionHandler(nil, error)
+                else {
+                    completionHandler(nil, nil)
                 }
             }
-            req.end()
-        // }
-        // catch {
-        //     completionHandler(nil, error)
-        // }
+            catch {
+                completionHandler(nil, error)
+            }
+        }
+        req.end()
     }
 
     public func createDoc(db: String, doc: [String: Any], completionHandler: @escaping (CouchDBSaveDocResponse?, Swift.Error?) -> Void) {

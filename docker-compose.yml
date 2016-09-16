@@ -5,7 +5,7 @@ services:
     ports:
       - "35984:5984"
   web:
-    image: markwatsonatx/swift-kitura-sample:0.28    
+    image: markwatsonatx/swift-kitura-sample:0.32   
     volumes:
       - ./src:/usr/src
     environment:
