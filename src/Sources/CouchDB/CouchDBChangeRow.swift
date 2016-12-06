@@ -2,11 +2,11 @@ import Foundation
 
 public class CouchDBChangeRow {
     
-    var seq: Int
-    var id: String
-    var changes: [String]
-    var deleted: Bool
-    var doc: [String:Any]?
+    public var seq: Int
+    public var id: String
+    public var changes: [String]
+    public var deleted: Bool
+    public var doc: [String:Any]?
     
     public init(dict:[String:Any]) {
         self.seq = dict["seq"] as! Int

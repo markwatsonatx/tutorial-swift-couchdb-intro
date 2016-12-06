@@ -7,8 +7,8 @@ public class CouchDBBulkDocRev {
     //    ids: [YYY]
     //  }
     
-    var start: Int64
-    var ids: [String]
+    public var start: Int64
+    public var ids: [String]
     
     public init(start:Int64, ids: [String]) {
         self.start = start

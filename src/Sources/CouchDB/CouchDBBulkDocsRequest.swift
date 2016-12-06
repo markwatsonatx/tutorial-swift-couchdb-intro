@@ -13,7 +13,7 @@ public class CouchDBBulkDocsRequest {
     //      }
     //    }]
 
-    var docs: [CouchDBBulkDoc]
+    public var docs: [CouchDBBulkDoc]
     
     public init(docs:[CouchDBBulkDoc]) {
         self.docs = docs
@@ -29,6 +29,5 @@ public class CouchDBBulkDocsRequest {
         dict["docs"] = docDicts
         return dict
     }
-    
 
 }

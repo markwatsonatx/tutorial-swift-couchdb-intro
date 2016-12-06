@@ -6,9 +6,9 @@ public class CouchDBSaveDocResponse {
     //  ok: true
     //  rev: 1-YYY
 
-    var id: String
-    var ok: Bool
-    var rev: String
+    public var id: String
+    public var ok: Bool
+    public var rev: String
     
     public init(dict:[String:Any]) {
         self.id = dict["id"] as! String

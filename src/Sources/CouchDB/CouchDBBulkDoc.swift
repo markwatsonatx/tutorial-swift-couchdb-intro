@@ -20,9 +20,9 @@ public class CouchDBBulkDoc {
     //    }
     //  }
     
-    var docRev: CouchDBDocRev
+    public var docRev: CouchDBDocRev
     //var revisions: CouchDBBulkDocRev
-    var doc: [String:Any]?
+    public var doc: [String:Any]?
     
 //    public init(docRev: CouchDBDocRev, revisions:CouchDBBulkDocRev, doc: [String:Any]?) {
 //        self.docRev = docRev

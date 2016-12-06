@@ -2,9 +2,9 @@ import Foundation
 
 public class CouchDBChanges {
     
-    var lastSequence: String?
-    var pending: Int?
-    var rows: [CouchDBChangeRow]
+    public var lastSequence: String?
+    public var pending: Int?
+    public var rows: [CouchDBChangeRow]
 
     public init(dict:[String:Any]) {
         self.lastSequence = dict["last_seq"] as? String

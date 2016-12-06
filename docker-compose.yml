@@ -1,11 +1,11 @@
 version: '2'
 services:
   db:
-    image: couchdb:latest    
+    image: markwatsonatx/couchdb:2.0.0
     ports:
       - "35984:5984"
   web:
-    image: markwatsonatx/swift-kitura-sample:0.32   
+    image: markwatsonatx/swift-kitura-sample:1.2
     volumes:
       - ./src:/usr/src
     environment:

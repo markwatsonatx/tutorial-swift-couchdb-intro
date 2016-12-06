@@ -2,10 +2,10 @@ import Foundation
 
 public class CouchDBEndpoint: CustomStringConvertible {
     
-    var baseUrl: String
-    var username: String?
-    var password: String?
-    var db: String
+    public var baseUrl: String
+    public var username: String?
+    public var password: String?
+    public var db: String
     
     public init(baseUrl: String, username: String?, password: String?, db: String) {
         self.baseUrl = baseUrl
